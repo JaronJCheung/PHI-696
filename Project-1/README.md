@@ -125,7 +125,7 @@ T(x) = ∃w∃y∃z(P(wx) ∧ P(wy) ∧ P(wz) ∧ ~(x=y) ∧ ~(x=z) ∧ ~(y=z)) 
 (a)  B that says that x is a brother of y
 
 $B\equiv M\sqcap ∃parentOf^-.(∃parentOf\ge2)$
-  
+   
 (b)  A that says that x is an aunt of y
 
 $A\equiv \neg M\sqcap ∃parentOf^-.((∃parentOf.(∃parentOf. M\sqcup \neg M\)) \sqcap ∃parentOf\ge2)$
