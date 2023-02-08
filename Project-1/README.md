@@ -338,7 +338,7 @@ therefore ¬Px + ¬Qx → ¬(Px ∧ Qx).
 I have not studied tree proofs yet, so I do not know how they operate. From the looks of it I am guessing tree proofs seek to find a contradiction (indirect derivation), but I could be totally wrong.
 
 (a) ∀x∀y(¬(Px ∧ Qx) → (¬Px ∨ ¬Qx))
-
+ 
 
 
 
