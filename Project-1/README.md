@@ -76,8 +76,23 @@ Conjunction normal form is a conjunction (^). We will use this to connect disjun
   
 (a) (A→B)→C = (~A ∨ B) → C = ~(~A ∨ B) ∨ C = (~~A ∧ ~B) ∨ C = (A ∧ ~B) ∨ C = **(A ∨ C) ∧ (~B ∨ C)** [Distribution rule]  
     
-(b) (A→(B∨C))∨(C→¬A) = (~A ∨ (B ∨ C)) ∨ (~C ∨ ~A) = (B ∨ C) ∨ (~C ∨ ~A) = **B ∨ ~A**
-  
+(b) (A→(B∨C))∨(C→¬A) = **A ∨ ~C**
+
+According to this truth table, this sentence is a tautology. Thus, this sentence can be reduced to A ∨ ~C.
+
+
+| A | B | C | ((¬A → B) ∨ ((A ∧ ¬C) → B)) |   |
+|---|---|---|-----------------------------|---|
+| F | F | F | T                           |   |
+| F | F | T | T                           |   |
+| F | T | F | T                           |   |
+| F | T | T | T                           |   |
+| T | F | F | T                           |   |
+| T | F | T | T                           |   |
+| T | T | F | T                           |   |
+| T | T | T | T                           |   |
+
+
 (c) (¬A∧¬B∧C)∨(¬A∧¬C)∨(B∧C)∨A = **A ∨ ~A**
 
 According to this truth table, this sentence is a tautology. Thus, this sentence can be reduced to A ∨ ~A.
