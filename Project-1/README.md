@@ -159,13 +159,6 @@ $T\equiv (M\sqcap ∃parentOf^-.(\le3 ∃parentOf.M \sqcap \ge3 ∃parentOf.M)) 
 
 5. Select two formulas defined in ALC from question 4 to form the basis of a T-Box. Supplement this T-box with whatever other axioms you like, as well as an A-box, so that you ultimately construct a knowledge base K = (T,A). Provide a _model_ of K. This may be graphical or symbolic or both. 
 
-K = Knowledge base 
-K = (T, A)
-T = general statement (e.g. ∃rC [relation without a name; C = concept]
-A = specific statement (e.g. a:c; (a, b): r [relation with a name])
-
-If we want to describe a domain, we have general statenents to assert a general relation and we have specific statements to assert specific relations.
-
 (a)  B that says that x is a brother of y
 
 Adding:
