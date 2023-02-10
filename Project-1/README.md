@@ -76,7 +76,7 @@ Conjunction normal form is a conjunction (^). We will use this to connect disjun
   
 (a) (A→B)→C = (~A ∨ B) → C = ~(~A ∨ B) ∨ C = (~~A ∧ ~B) ∨ C = (A ∧ ~B) ∨ C = **(A ∨ C) ∧ (~B ∨ C)** [Distribution rule]  
     
-(b) (A→(B∨C))∨(C→¬A) = **A ∨ ~C**
+(b) (A→(B∨C))∨(C→¬A) = **A ∨ ~A**
 
 According to this truth table, this sentence is a tautology. Thus, this sentence can be reduced to A ∨ ~C.
 
@@ -114,28 +114,28 @@ A tautology takes the form of P ∨ ~P.
   
 (a)  B(x,y) that says that x is a brother of y: 
   
-B(xy) = ∃z(P(zx) ∧ P(zy)) ∧ ~F(x)
+B(xy) = ∃z(P(z,x) ∧ P(z,y)) ∧ ~F(x)
 
 (b)  A(x,y) that says that x is an aunt of y
   
-A(xy) = ∃z∃u(P(ux) ∧ P(uz) ∧ P(zy) ∧ F(x))
+A(xy) = ∃z∃u(P(u,x) ∧ P(u,z) ∧ P(z,y) ∧ F(x))
 
 (c)  C(x,y) that says that x and y are cousins   
   
-C(xy) = ∃u∃w∃z(P(uw) ∧ P(uz) ∧ P(wx) ∧ P(zy) ∧ ~(z=u)) ∧ ~(x=y) 
+C(xy) = ∃u∃w∃z(P(u,w) ∧ P(u,z) ∧ P(w,x) ∧ P(z,y) ∧ ~(z=u)) ∧ ~(x=y) 
   
 (d)  O(x) that says that x is an only child  
   
-O(x) = ∃z(P(zx) ∧ ∀y(P(uy) → x=y))
+O(x) = ∃z(P(z,x) ∧ ∀y(P(z,y) → x=y))
   
 (e)  T(x) that says that x has exactly two brothers 
   
-T(x) = ∃w∃y∃z(P(wx) ∧ P(wy) ∧ P(wz) ∧ ~(x=y) ∧ ~(x=z) ∧ ~(y=z)) ∧ ∀u(P(wu) → u=x ∨ u=y ∨ u=z))    
+T(x) = ∃w∃y∃z(P(w,x) ∧ P(w,y) ∧ P(w,z) ∧ ~(x=y) ∧ ~(x=z) ∧ ~(y=z) ∧ ~F(x) ∧ ~F(y) ∧ ~F(z) ∧ ∀u(P(w,u) → u=x ∨ u=y ∨ u=z) ∧ ~F(u))    
   
 
 4. Let V be a vocabulary of the attribute (concept) language with complements (ALC) consisting of a role name "parent_of" and a concept name "Male". Interpret parent_of as "x is a parent of y" and M as "x is male". Where possible define the following formulas in this vocabulary; where not possible, explain why: 
 
-***I need help on this one***
+I am providing two possible sets of answers for a-e:
 
 (a)  B that says that x is a brother of y
 
@@ -156,6 +156,33 @@ $O\equiv ∃parentOf^-.(∃parentOf.\le1)$
 (e)  T that says that x has exactly two brothers 
 
 $T\equiv (M\sqcap ∃parentOf^-.(\le3 ∃parentOf.M \sqcap \ge3 ∃parentOf.M)) \sqcup (\neg M \sqcap ∃parentOf^-.(\le2 ∃parentOf.M \sqcap \ge2 ∃parentOf.M))$
+
+_____
+
+(a)  B that says that x is a brother of y
+
+person := M ⊔ ¬M
+
+P2 (parent of at least 2) := (∃parent_of.person ≥ 2) ⊓ \neg(∃parent_of.person = 1)
+
+B (brother) := M ⊓ ∃P2^-. person
+
+⊔ ⊓ ≤ ≥ \neg 
+
+(b)  A that says that x is an aunt of y
+
+$A\equiv \neg M\sqcap ∃parentOf^-.((∃parentOf.(∃parentOf. M\sqcup \neg M\)) \sqcap ∃parentOf\ge2)$
+ 
+(c)  C that says that x and y are cousins
+
+$C\equiv ∃parentOf^-.(∃parentOf.(\ge2 2parentOf.(parentOf M\sqcup \neg M\)))$
+
+(d)  O that says that x is an only child  
+
+$O\equiv ∃parentOf^-.(∃parentOf.\le1)$
+
+(e)  T that says that x has exactly two brothers 
+
 
 5. Select two formulas defined in ALC from question 4 to form the basis of a T-Box. Supplement this T-box with whatever other axioms you like, as well as an A-box, so that you ultimately construct a knowledge base K = (T,A). Provide a _model_ of K. This may be graphical or symbolic or both. 
 
