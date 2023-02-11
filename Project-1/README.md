@@ -10,10 +10,10 @@ Tip #4: The work we do is challenging; that should be assumed. You are smart eno
 
 Note: The standard interpretation of the logical symbols - "∨", "∧", "→", "¬", "∀", "∃" - is assumed throughout. 
 
-1. Provide the truth tables for each of the following propositional logic formulas. State whether each is a tautology, a contradiction, or contingent:
+**1. Provide the truth tables for each of the following propositional logic formulas. State whether each is a tautology, a contradiction, or contingent:**
 
-(a) (¬A→B)∨((A∧¬C)→B: Tatuology
-  
+**(a) (¬A→B)∨((A∧¬C)→B: Tatuology**  
+
 | A | B | C | ((¬A → B) ∨ ((A ∧ ¬C) → B)) |  
 |:---:|:---:|:---:|:-----------------------------:|
 | F | F | F | T                           |   
@@ -25,7 +25,7 @@ Note: The standard interpretation of the logical symbols - "∨", "∧", "→", 
 | T | T | F | T                           |   
 | T | T | T | T                           |   
 
-(b) (A→B)∧(A→¬B): Contingent
+**(b) (A→B)∧(A→¬B): Contingent**
   
 | A | B | ((A → B) ∧ (A → ¬B)) |
 |:-:|:-:|:--------------------:|
@@ -34,7 +34,7 @@ Note: The standard interpretation of the logical symbols - "∨", "∧", "→", 
 | T | F |           F          |   
 | T | T |           F          |
   
-(c) (A→(B∨C))∨(C→¬A): Tautology
+**(c) (A→(B∨C))∨(C→¬A): Tautology**
 
 | A | B | C | ((A → (B ∨ C)) ∨ (C → ¬A)) |   
 |:-:|:-:|:-:|:--------------------------:|
@@ -47,7 +47,7 @@ Note: The standard interpretation of the logical symbols - "∨", "∧", "→", 
 | T | T | F |              T             |   
 | T | T | T |              T             |   
   
-(d) ((A→B)∧C)∨(A∧D): Contingent
+**(d) ((A→B)∧C)∨(A∧D): Contingent**
 
 | A | B | C | D | (((A → B) ∧ C) ∨ (A ∧ D)) |
 |:-:|:-:|:-:|:-:|:-------------------------:|
@@ -70,7 +70,7 @@ Note: The standard interpretation of the logical symbols - "∨", "∧", "→", 
 
 
 	
-2. A _literal_ is an atomic formula or the negation of an atomic formula. We say a formula is in _conjunctive normal form_ (CNF) if it is the conjunction of the disjunction of literals. Find propositional logic formulas in CNF equivalent to each of the following:
+**2. A _literal_ is an atomic formula or the negation of an atomic formula. We say a formula is in _conjunctive normal form_ (CNF) if it is the conjunction of the disjunction of literals. Find propositional logic formulas in CNF equivalent to each of the following:**
 
 Conjunction normal form is a conjunction (^). We will use this to connect disjunctions. 
   
@@ -110,120 +110,220 @@ According to this truth table, this sentence is a tautology. Thus, this sentence
 
 A tautology takes the form of P ∨ ~P. 
   
-3. Let V be the vocabulary of first-order logic consisting of a binary relation P and a unary relation F. Interpret P(x,y) as “x is a parent of y” and F(x) as “x is female.” Where possible define the following formulas in this vocabulary; where not possible, explain why: 
+**3. Let V be the vocabulary of first-order logic consisting of a binary relation P and a unary relation F. Interpret P(x,y) as “x is a parent of y” and F(x) as “x is female.” Where possible define the following formulas in this vocabulary; where not possible, explain why:**  
+
+(a)  B(x,y) that says that x is a brother of y:
   
-(a)  B(x,y) that says that x is a brother of y: 
-  
-B(xy) = ∃z(P(z,x) ∧ P(z,y)) ∧ ~F(x)
+**B(xy) = ∃z(P(z,x) ∧ P(z,y)) ∧ ~F(x)**
 
 (b)  A(x,y) that says that x is an aunt of y
   
-A(xy) = ∃z∃u(P(u,x) ∧ P(u,z) ∧ P(z,y) ∧ F(x))
+**A(xy) = ∃z∃u(P(u,x) ∧ P(u,z) ∧ P(z,y) ∧ F(x))**
 
 (c)  C(x,y) that says that x and y are cousins   
   
-C(xy) = ∃u∃w∃z(P(u,w) ∧ P(u,z) ∧ P(w,x) ∧ P(z,y) ∧ ~(z=u)) ∧ ~(x=y) 
-  
+**C(xy) = ∃u∃w∃z(P(u,w) ∧ P(u,z) ∧ P(w,x) ∧ P(z,y) ∧ ~(z=u)) ∧ ~(x=y)**  
+
 (d)  O(x) that says that x is an only child  
   
-O(x) = ∃z(P(z,x) ∧ ∀y(P(z,y) → x=y))
-  
+**O(x) = ∃z(P(z,x) ∧ ∀y(P(z,y) → x=y))**
+
 (e)  T(x) that says that x has exactly two brothers 
   
-T(x) = ∃w∃y∃z(P(w,x) ∧ P(w,y) ∧ P(w,z) ∧ ~(x=y) ∧ ~(x=z) ∧ ~(y=z) ∧ ~F(x) ∧ ~F(y) ∧ ~F(z) ∧ ∀u(P(w,u) → u=x ∨ u=y ∨ u=z) ∧ ~F(u))    
-  
+**T(x) = ∃w∃y∃z(P(w,x) ∧ P(w,y) ∧ P(w,z) ∧ ~(x=y) ∧ ~(x=z) ∧ ~(y=z) ∧ ~F(x) ∧ ~F(y) ∧ ~F(z) ∧ ∀u(P(w,u) → u=x ∨ u=y ∨ u=z) ∧ ~F(u))**  
 
-4. Let V be a vocabulary of the attribute (concept) language with complements (ALC) consisting of a role name "parent_of" and a concept name "Male". Interpret parent_of as "x is a parent of y" and M as "x is male". Where possible define the following formulas in this vocabulary; where not possible, explain why: 
+**4. Let V be a vocabulary of the attribute (concept) language with complements (ALC) consisting of a role name "parent_of" and a concept name "Male". Interpret parent_of as "x is a parent of y" and M as "x is male". Where possible define the following formulas in this vocabulary; where not possible, explain why:**
 
-I am providing two possible sets of answers for a-e:
+**I am providing two possible sets of answers for (a)-(e) (I also go back and forth between using markdown code and not. My apologies for the inconsistency):**
 
 (a)  B that says that x is a brother of y
 
-$B\equiv M\sqcap ∃parentOf^-.(∃parentOf\ge2)$
-  
+**$B\equiv M\sqcap ∃parentOf^-.(∃parentOf\ge2)$**  
+
 (b)  A that says that x is an aunt of y
 
-$A\equiv \neg M\sqcap ∃parentOf^-.((∃parentOf.(∃parentOf. M\sqcup \neg M\)) \sqcap ∃parentOf\ge2)$
- 
+**$A\equiv \neg M\sqcap ∃parentOf^-.((∃parentOf.(∃parentOf. M\sqcup \neg M\)) \sqcap ∃parentOf\ge2)$** 
+
+or 
+
+**A ≡ ¬M ⊓ (∃p2¯.(≥ 2 parent_of. (∃parent_of. Person)) ⊔ ¬∃parent_of. Person)**
+
 (c)  C that says that x and y are cousins
 
-$C\equiv ∃parentOf^-.(∃parentOf.(\ge2 2parentOf.(parentOf M\sqcup \neg M\)))$
+**$C\equiv ∃parentOf^-.(∃parentOf.(\ge2 2parentOf.(parentOf M\sqcup \neg M\)))$**
 
 (d)  O that says that x is an only child  
 
-$O\equiv ∃parentOf^-.(∃parentOf.\le1)$
+**parent_only (be a parent of exactly one child) ≡ (≥1 parent_of. Person) ⊓ (≤1 parent_of. Person)**
+
+**O ≡ ∃parent_only¯.Person**
+
+or 
+
+**$O\equiv ∃parentOf^-.(∃parentOf.\le1)$**
 
 (e)  T that says that x has exactly two brothers 
 
-$T\equiv (M\sqcap ∃parentOf^-.(\le3 ∃parentOf.M \sqcap \ge3 ∃parentOf.M)) \sqcup (\neg M \sqcap ∃parentOf^-.(\le2 ∃parentOf.M \sqcap \ge2 ∃parentOf.M))$
+**p3m (be a parent of exactly three male children) ≡ (≥3 parent_of. Male) ⊓ (≤3 parent_of. Male)**
+
+**p1 (be a parent of at least one child) ≡ ≥1 parent_of. Person -- the inverse of p1 is just "be a child of"!**
+
+**T ≡ ∃p3m¯.Person ⊔ (¬M ⊓ ∃p1¯. (≥2 parent_of. Male ⊓ ≤2 parent_of. Male)) -- This means, either x is one of exactly 3 boys produced by a person (so x has exactly two brothers), or x is female and is a child of a person who has exactly two boys (so x has also exactly two brothers).**
+
+or
+
+**$T\equiv (M\sqcap ∃parentOf^-.(\le3 ∃parentOf.M \sqcap \ge3 ∃parentOf.M)) \sqcup (\neg M \sqcap ∃parentOf^-.(\le2 ∃parentOf.M \sqcap \ge2 ∃parentOf.M))$**
 
 _____
 
 (a)  B that says that x is a brother of y
 
-person := M ⊔ ¬M
+**person := M ⊔ ¬M**
 
-P2 (parent of at least 2) := (∃parent_of.person ≥ 2) ⊓ \neg(∃parent_of.person = 1)
+**P2 (parent of at least 2) := (∃parent_of.person ≥ 2) ⊓ \neg(∃parent_of.person = 1)**
 
-B (brother) := M ⊓ ∃P2^-. person
-
-⊔ ⊓ ≤ ≥ \neg 
+**B (brother) := M ⊓ ∃P2¯.person**
 
 (b)  A that says that x is an aunt of y
 
-$A\equiv \neg M\sqcap ∃parentOf^-.((∃parentOf.(∃parentOf. M\sqcup \neg M\)) \sqcap ∃parentOf\ge2)$
- 
+**S (sister) := ¬M ⊓ ∃P2¯.person**
+
+**Sib (sibling) := B ⊔ S**
+
+**A (aunt) := ¬M ⊓ (∃P2¯.((parent_of. ≥ 2).(parent_of.person)) ⊔ ¬parent_of.person)**
+
+**U (uncle) := M ⊓ (∃P2^-.((parent_of. ≥ 2).(parent_of.person)) ⊔ ¬parent_of.person)**
+
 (c)  C that says that x and y are cousins
 
-$C\equiv ∃parentOf^-.(∃parentOf.(\ge2 2parentOf.(parentOf M\sqcup \neg M\)))$
+**This is not possible because in description logic, only one entity or role can be described at once. Thus, we cannot say the statement x and y are cousins.**
 
 (d)  O that says that x is an only child  
 
-$O\equiv ∃parentOf^-.(∃parentOf.\le1)$
+**O := ¬∃P2¯.person** 
+
+**Translation: X does not fall under the set of people who have a parent, parent to two or more people.**
 
 (e)  T that says that x has exactly two brothers 
 
+**This formula cannot be defined in the vocabulary of ALC with only the role name "parent_of" and the concept name "Male". ALC only allows expressing subsumption relationships between concepts, not cardinality or other relationships between roles. To express the relationship "x has exactly two brothers, " we would need to have a role name for "brother_of" or similar, as well as a way to express cardinality constraints.**
 
-5. Select two formulas defined in ALC from question 4 to form the basis of a T-Box. Supplement this T-box with whatever other axioms you like, as well as an A-box, so that you ultimately construct a knowledge base K = (T,A). Provide a _model_ of K. This may be graphical or symbolic or both. 
+**5. Select two formulas defined in ALC from question 4 to form the basis of a T-Box. Supplement this T-box with whatever other axioms you like, as well as an A-box, so that you ultimately construct a knowledge base K = (T,A). Provide a _model_ of K. This may be graphical or symbolic or both.**
+
+**I am providing two possible sets of answers:**
+
+TBox = {
+B ⊑ M
+B ⊑ Per
+M ⊑ Per
+A ⊑ ¬M
+A ⊑ Per
+}
+
+ABox = { John : M
+John : parentof. Chris
+John: B
+Chris: M
+Mary : ¬M
+Mary: A
+Alexander : parentof. Mary
+Alexander : parentof. John
+}
+
+ΔI = {John, Mary, Alexander, Chris}
+
+Named Individuals:
+JohnI = J,
+MaryI = M,
+AlexanderI = A,
+Chris = C
+
+Concept Assignments:
+PersonI = {J, M, A, C},
+MaleI = {J, A, C},
+FemaleI = {M},
+BrotherI = {J},
+AuntI = {M}
+
+Role Assignments:
+parentofI = {(J, C), (A, J), (A, M)}
+
+_____
 
 (a)  B that says that x is a brother of y
 
 Adding:
 
 Role name: "HasParent" and "HasChild"
+
 Interpret "HasParent" as "x has parent z".
+
 Interpret "HasChild" as "z has child x and y"
 
 Concept name: "Child"
+
 Interpret C as "x is a child"
 
-T-Box: $B\equiv M \sqcap C \sqcap ∃HasParent.(∃HasChild\ge2)$
+T-Box = {
+B ⊑ M,
+B ⊑ Per,
+M ⊑ Per,
+C ⊑ Per,
+P ⊑ Per,
+}
 
-A-Box: Man(x), Child(x,y), Sibling(x,y), HasParent(x,y), HasChild(z)
+ABox = { Jay : M,
+Jay : HasParent. May,
+Jay : B,
+Jay : C,
+Kay : M,
+Kay : HasParent. May,
+Kay : B,
+Kay : C,
+May : HasChild. Jay,
+May : HasChild. Kay,
+}
+
+Man(x), Child(x,y), Sibling(x,y), HasParent(x,y), HasChild(z)
+
+$B\equiv M \sqcap C \sqcap ∃HasParent.(∃HasChild\ge2)$
 
 (d)  O that says that x is an only child  
 
 Adding:
 
 Role name: "HasParent" and "HasChild"
+
 Interpret "HasParent" as "x has parent z".
+
 Interpret "HasChild" as "z has child x"
 
 Concept name: "Child"
+
 Interpret C as "x is a child"
 
-T-Box: $O\equiv C \sqcap ∃HasParent.(∃parentOf.\le1)$
+T-Box = {
+M ⊑ Per,
+C ⊑ Per,
+P ⊑ Per,
+}
 
-A-Box: Child(x), HasParent(x), HasChild(z)
+A-Box = {Jay : M,
+Jay : HasParent. May,
+Jay : C,
+May : HasChild. Jay,
 
+Child(x), HasParent(x), HasChild(z)
+
+$O\equiv C \sqcap ∃HasParent.(∃parentOf.\le1)$
 
 6. Explain the difference - using natural language - between the first-order prefixes:
 
 (a) ∃x∀y and ∀x∃y
 
-∃x∀y = "Something is identical with everything" or "There exists an x such that for every y." This can be interpreted as a statement saying that there is at least one value of x for which the statement "for every y" is true. In other words, it asserts the existence of x in relation to all possible values of y.
+∃x∀y = "There exists an x such that for every y" or possibly "Something is identical with everything." This can be interpreted as a statement saying that there is at least one value of x for which the statement "for every y" is true. In other words, it asserts the existence of x in relation to all possible values of y.
 
-∀x∃y = "Everything is identical with something" or "For all x, there exists a y." This can be interpreted as a statement saying that for every possible value of x, there is at least one corresponding value of y. In other words, it asserts the existence of y in relation to all possible values of x.
+∀x∃y = "For all x, there exists a y" or possible "Everything is identical with something" This can be interpreted as a statement saying that for every possible value of x, there is at least one corresponding value of y. In other words, it asserts the existence of y in relation to all possible values of x.
 
 (b) ∃x∀y∃z and ∀x∃y∀z 
 
@@ -368,12 +468,10 @@ therefore ¬Px + ¬Qx → ¬(Px ∧ Qx).
 
 10. Compare and contrast the proofs provided for (a) in your answers to questions 8 and 9. Explain the different assumptions, strategies, etc. exhibited in tree proofs vs natural deduction proofs. 
 
-***I need help on this one***
+Tree proofs arrive at a conclusion by indirect derivation, that is, finding a contradiction.
 
-I have not studied tree proofs yet, so I do not know how they operate. From the looks of it I am guessing tree proofs seek to find a contradiction (indirect derivation), but I could be totally wrong.
+Natural deduction allows for a multiplicty of derivation rules and inference rules to prove a conclusion (e.g. derivation rules: direct derivation, conditional derivation, indirect derivation, universal derivation and basic and derived inference rules). 
 
 (a) ∀x∀y(¬(Px ∧ Qx) → (¬Px ∨ ¬Qx))
- 
-
 
 
