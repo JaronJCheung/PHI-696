@@ -213,21 +213,21 @@ _____
 **I am providing two possible sets of answers:**
 
 TBox = {
-B ⊑ M
-B ⊑ Per
-M ⊑ Per
-A ⊑ ¬M
-A ⊑ Per
+B ⊑ M,
+B ⊑ Per,
+M ⊑ Per,
+A ⊑ ¬M,
+A ⊑ Per,
 }
 
-ABox = { John : M
-John : parentof. Chris
-John: B
-Chris: M
-Mary : ¬M
-Mary: A
-Alexander : parentof. Mary
-Alexander : parentof. John
+ABox = { John : M,
+John : parentof. Chris,
+John: B,
+Chris: M,
+Mary : ¬M,
+Mary: A,
+Alexander : parentof. Mary,
+Alexander : parentof. John,
 }
 
 ΔI = {John, Mary, Alexander, Chris}
