@@ -78,7 +78,7 @@ Conjunction normal form is a conjunction (^). We will use this to connect disjun
     
 (b) (A→(B∨C))∨(C→¬A) = **A ∨ ~A**
 
-According to this truth table, this sentence is a tautology. Thus, this sentence can be reduced to A ∨ ~C.
+According to this truth table, this sentence is a tautology. Thus, this sentence can be reduced to A ∨ ~A.
 
 
 | A | B | C | ((¬A → B) ∨ ((A ∧ ¬C) → B)) |   |
