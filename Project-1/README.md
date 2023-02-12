@@ -471,7 +471,3 @@ therefore ¬Px + ¬Qx → ¬(Px ∧ Qx).
 Tree proofs arrive at a conclusion by indirect derivation, that is, finding a contradiction.
 
 Natural deduction allows for a multiplicty of derivation rules and inference rules to prove a conclusion (e.g. derivation rules: direct derivation, conditional derivation, indirect derivation, universal derivation and basic and derived inference rules). 
-
-(a) ∀x∀y(¬(Px ∧ Qx) → (¬Px ∨ ¬Qx))
-
-
