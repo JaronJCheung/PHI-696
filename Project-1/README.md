@@ -130,7 +130,7 @@ A tautology takes the form of P ∨ ~P.
 
 (e)  T(x) that says that x has exactly two brothers 
   
-**T(x) = ∃w∃y∃z(P(w,x) ∧ P(w,y) ∧ P(w,z) ∧ ~(x=y) ∧ ~(x=z) ∧ ~(y=z) ∧ ~F(y) ∧ ~F(z) ∧ ∀u(P(w,u) → u=x ∨ u=y ∨ u=z) ∧ ~F(u))**  
+**T(x) = ∃w∃y∃z(P(w,x) ∧ P(w,y) ∧ P(w,z) ∧ ~(x=y) ∧ ~(x=z) ∧ ~(y=z) ∧ ~F(y) ∧ ~F(z) ∧ ∀u(P(w,u) ∧ ~F(u) → u=x ∨ u=y ∨ u=z))**  
 
 **4. Let V be a vocabulary of the attribute (concept) language with complements (ALC) consisting of a role name "parent_of" and a concept name "Male". Interpret parent_of as "x is a parent of y" and M as "x is male". Where possible define the following formulas in this vocabulary; where not possible, explain why:**
 
